@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, My Love!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #c1f0f6);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+    .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background iframe {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  object-fit: cover;
+}
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 2rem;
+      margin-top: -80px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ff4e8e;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff4e8e, #6a5af9);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    .slideshow-container { position: relative; }
+    .mySlides { display: none; }
+    .mySlides img { width: 100%; border-radius: 20px; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .container { margin-top: -50px; }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="video-background">
+            <iframe
+              src="https://www.youtube.com/embed/v7Z9rF0Jp38?autoplay=1&mute=1&controls=0&loop=1&playlist=v7Z9rF0Jp38&modestbranding=1&showinfo=0"
+              frameborder="0"
+              allow="autoplay"
+              allowfullscreen>
+            </iframe>
+          </div>
+      </div>
+      
+
+  <div class="container">
+    <h1>Hey love 💖</h1>
+    <p>If you've scanned this QR code, it means it's your special day — Happy Birthday, Camelia! 🎉</p>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container" style="margin: 2rem 0;">
+      <div class="mySlides fade"><img src="memory1.jpg" alt="Memory 1"></div>
+      <div class="mySlides fade"><img src="memory2.jpg" alt="Memory 2"></div>
+      <div class="mySlides fade"><img src="memory3.jpg" alt="Memory 3"></div>
+    </div>
+
+    <h2 style="color: #ff4e8e;">Happy Birthday, My Love! 🎂</h2>
+    <p>
+      Today we celebrate you — your laughter, your light, your heart. Thank you for filling my life with happiness.
+      May this year bring you everything you dream of, and know that I’ll be right beside you through it all. 💕
+    </p>
+
+    <!-- Surprise Button -->
+    <a class="button" href="https://u43446334.ct.sendgrid.net/ls/click?upn=u001.Wny1457477j6gd4Kq0ntthjPba-2F1dGMoE70QFFd8T72GmdSSBB853lG0WwUPcBfiSiMCYQ56yVwVUCKSucOftg-3D-3DUPBJ_WUbQb1lUcg44yAnOCnktMCjRVAZgrlT8tVGVYgtanEZBOVurTPH3MABdBvaVdPpwFRPXtW-2BdR94P37GZ3ZUmf4BaUm356BuUzK5bvzhSQkyPaVpzPgbz6ABqeiwoE92HACkA450WkQ8bG-2BDAonfHnuAw5G0ZYabRpLMjYuGj3g-2BhblcPaUArc3itQVXbGKrT9Mm-2Fez1uUrISHCjjzruPZg-3D-3D" target="_blank">
+      🎁 Open Your Surprise
+    </a>
+
+    <p style="margin-top: 1.5rem;">
+      Follow the steps:<br>
+      ➤ Download the app using the button above<br>
+      ➤ Login with: <strong>avipriyaghosh007@gmail.com</strong><br><br>
+      And yes... there's <strong>another surprise</strong> waiting for you inside the app! 😍
+    </p>
+  </div>
+
+  <!-- Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Embed "Iris" by Goo Goo Dolls (autoplay and loop) -->
+  <iframe
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/NdYWuo9OFAw?autoplay=1&loop=1&playlist=NdYWuo9OFAw"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen
+    style="display: none;">
+  </iframe>
+
+  <!-- 🎈 Birthday Game Section -->
+  <section style="margin: 4rem auto; text-align: center;">
+    <h2 style="color: #ff4e8e; font-size: 2rem;">🎈 Pop the Balloons for Fun!</h2>
+    <p style="color: #666; margin-bottom: 1rem;">Click all the balloons to reveal a hidden message 🎁</p>
+    <div id="balloon-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 600px; margin: auto;"></div>
+    <p id="game-message" style="margin-top: 2rem; font-weight: bold; font-size: 1.5rem; color: #6a5af9;"></p>
+  </section>
+
+  <script>
+    // Confetti
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const confetti = Array.from({length: 200}).map(() => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 4,
+      d: Math.random() * 200 + 10,
+      color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+      tilt: Math.random() * 10 - 10
+    }));
+    function drawConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confetti.forEach(c => {
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+        ctx.fillStyle = c.color;
+        ctx.fill();
+      });
+    }
+    function moveConfetti() {
+      confetti.forEach(c => {
+        c.y += Math.cos(c.d) + 1 + c.r / 2;
+        c.x += Math.sin(c.d);
+        if (c.y > canvas.height) {
+          c.x = Math.random() * canvas.width;
+          c.y = -10;
+        }
+      });
+    }
+    function animateConfetti() {
+      drawConfetti();
+      moveConfetti();
+      requestAnimationFrame(animateConfetti);
+    }
+    animateConfetti();
+
+    // Slideshow
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+
+    // Quotes
+    const quotes = [
+      "You are my sunshine on a cloudy day.",
+      "With you, every moment is magical.",
+      "I’m so lucky to have you in my life."
+    ];
+    let quoteIndex = 0;
+    function showQuotes() {
+      document.getElementById("quote-box")?.textContent = quotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      setTimeout(showQuotes, 4000);
+    }
+    showQuotes();
+
+    // 🎈 Game Logic
+    const container = document.getElementById("balloon-container");
+    const message = document.getElementById("game-message");
+    let popped = 0;
+    for (let i = 0; i < 10; i++) {
+      const balloon = document.createElement("div");
+      balloon.style.width = "60px";
+      balloon.style.height = "80px";
+      balloon.style.borderRadius = "50% 50% 50% 50%";
+      balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 70%)`;
+      balloon.style.cursor = "pointer";
+      balloon.style.transition = "transform 0.2s ease";
+      balloon.addEventListener("click", () => {
+        if (!balloon.classList.contains("popped")) {
+          balloon.classList.add("popped");
+          balloon.style.transform = "scale(0)";
+          popped++;
+          if (popped === 10) {
+            message.innerText = "🎉 Surprise! I love you, Camelia 💖";
+          }
+        }
+      });
+      container.appendChild(balloon);
+    }
+  </script>
+</body>
+</html>
